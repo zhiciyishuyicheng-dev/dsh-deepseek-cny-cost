@@ -1,0 +1,52 @@
+{
+  "name": "dsh-deepseek-cny-cost",
+  "version": "0.1.0",
+  "type": "module",
+  "description": "DeepSeek Harness plugin: a live CNY cost estimate for the chat you are reading, priced with DeepSeek's peak / off-peak rates.",
+  "license": "MIT",
+  "author": "zhiciyishuyicheng-dev",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zhiciyishuyicheng-dev/dsh-deepseek-cny-cost.git"
+  },
+  "homepage": "https://github.com/zhiciyishuyicheng-dev/dsh-deepseek-cny-cost#readme",
+  "bugs": {
+    "url": "https://github.com/zhiciyishuyicheng-dev/dsh-deepseek-cny-cost/issues"
+  },
+  "keywords": [
+    "deepseek",
+    "deepseek-harness",
+    "dsh",
+    "dsh-plugin",
+    "cost",
+    "cny",
+    "pricing",
+    "tokens"
+  ],
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js"
+  },
+  "files": [
+    "client.js",
+    "index.js",
+    "cordis.patch.yml",
+    "tools/",
+    "preview.html",
+    "README.md",
+    "README.zh.md",
+    "LICENSE"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-conversation"
+      ]
+    }
+  }
+}

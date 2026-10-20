@@ -1,0 +1,7 @@
+node_modules/
+*.log
+.host-apply.log
+.npm-cache/
+.DS_Store
+Thumbs.db
+*.tgz

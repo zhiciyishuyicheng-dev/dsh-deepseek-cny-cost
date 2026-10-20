@@ -1,0 +1,6 @@
+# 本 bundle 的 Loader 补丁：向 profile 插入一行插件条目。
+# 行的 id 与 package.json 的 name 保持一致；想停用就在 profile 的
+# cordis.patch.yml 里对该 id 写 disabled: true。
+- insert:
+    - id: cny-cost
+      name: 'dsh-deepseek-cny-cost'

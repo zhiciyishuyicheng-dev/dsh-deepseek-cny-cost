@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<title>dsh-deepseek-cny-cost · 样式候选</title>
+<style>
+  :root { color-scheme: light dark; }
+  body { margin: 0; padding: 32px; font: 14px/1.6 -apple-system, "Segoe UI", "Microsoft YaHei", sans-serif;
+         background: #f6f7f9; color: #1f2328; }
+  h1 { font-size: 18px; margin: 0 0 4px; }
+  p.lead { margin: 0 0 24px; color: #5c6570; font-size: 13px; }
+  .board { display: grid; gap: 20px; grid-template-columns: 1fr; max-width: 860px; }
+  .card { border-radius: 12px; padding: 18px 20px 22px; border: 1px solid rgba(0,0,0,.08); background: #fff; }
+  .card.dark { background: #17181c; border-color: rgba(255,255,255,.10); color: #e6e8ec; }
+  .card h2 { font-size: 13px; margin: 0 0 14px; font-weight: 600; color: #5c6570; }
+  .card.dark h2 { color: #9aa2ad; }
+  .composer { display: flex; align-items: center; gap: 8px; height: 44px; padding: 0 12px;
+              border: 1px solid rgba(0,0,0,.10); border-radius: 12px; background: #fff; }
+  .card.dark .composer { background: #202127; border-color: rgba(255,255,255,.12); }
+  .dot { width: 5px; height: 5px; border-radius: 999px; background: #f2b705;
+         box-shadow: 0 0 0 1px rgba(127,127,127,.45); flex: none; }
+  .row { display: flex; align-items: center; gap: 6px; }
+  .model { margin-left: auto; font-size: 12px; color: #8a8f98; }
+
+  /* A. 现状：裸文字 */
+  .v-a { font-size: 12px; line-height: 20px; color: #8a8f98; font-variant-numeric: tabular-nums; }
+
+  /* B. 胶囊底 */
+  .v-b { display: inline-flex; align-items: center; height: 20px; padding: 0 6px; border-radius: 6px;
+         background: rgba(127,127,127,.12); color: #5c6570; font-size: 11.5px; line-height: 1;
+         font-variant-numeric: tabular-nums; }
+  .card.dark .v-b { background: rgba(255,255,255,.10); color: #c6ccd5; }
+
+  /* C. 描边胶囊 */
+  .v-c { display: inline-flex; align-items: center; height: 20px; padding: 0 7px; border-radius: 999px;
+         border: 1px solid rgba(127,127,127,.32); color: #5c6570; font-size: 11.5px; line-height: 1;
+         font-variant-numeric: tabular-nums; }
+  .card.dark .v-c { border-color: rgba(255,255,255,.22); color: #c6ccd5; }
+
+  /* D. 标签 + 金额 */
+  .v-d { display: inline-flex; align-items: baseline; gap: 4px; font-size: 11.5px; line-height: 1;
+         font-variant-numeric: tabular-nums; color: #8a8f98; }
+  .v-d b { font-weight: 600; font-size: 12px; color: #3d444d; }
+  .card.dark .v-d b { color: #e6e8ec; }
+
+  /* E. 胶囊 + 强调金额 */
+  .v-e { display: inline-flex; align-items: center; gap: 4px; height: 20px; padding: 0 7px; border-radius: 6px;
+         background: rgba(127,127,127,.12); font-size: 11px; line-height: 1; color: #8a8f98;
+         font-variant-numeric: tabular-nums; }
+  .v-e b { font-weight: 600; font-size: 12px; color: #3d444d; }
+  .card.dark .v-e { background: rgba(255,255,255,.10); }
+  .card.dark .v-e b { color: #fff; }
+
+  table { border-collapse: collapse; margin-top: 22px; font-size: 13px; }
+  td, th { text-align: left; padding: 6px 14px 6px 0; }
+  th { color: #5c6570; font-weight: 600; }
+  code { background: rgba(127,127,127,.14); padding: 1px 5px; border-radius: 4px; font-size: 12px; }
+</style>
+</head>
+<body>
+<h1>成本徽标 · 五种样式</h1>
+<p class="lead">同一行里，左边是原有的黄绿圆点，右边是四种候选。深色底模拟深色主题。看完告诉我要 <b>A / B / C / D / E</b>。</p>
+
+<div class="board">
+  <div class="card">
+    <h2>浅色主题</h2>
+    <div class="composer">
+      <div class="row"><span class="dot"></span><span class="v-a">≈¥2.46</span></div>
+      <div class="row"><span class="dot"></span><span class="v-b">≈¥2.46</span></div>
+      <div class="row"><span class="dot"></span><span class="v-c">≈¥2.46</span></div>
+      <div class="row"><span class="dot"></span><span class="v-d">本聊天<b>≈¥2.46</b></span></div>
+      <div class="row"><span class="dot"></span><span class="v-e">花费<b>¥2.46</b></span></div>
+      <span class="model">deepseek-flash</span>
+    </div>
+  </div>
+
+  <div class="card dark">
+    <h2>深色主题</h2>
+    <div class="composer">
+      <div class="row"><span class="dot"></span><span class="v-a">≈¥2.46</span></div>
+      <div class="row"><span class="dot"></span><span class="v-b">≈¥2.46</span></div>
+      <div class="row"><span class="dot"></span><span class="v-c">≈¥2.46</span></div>
+      <div class="row"><span class="dot"></span><span class="v-d">本聊天<b>≈¥2.46</b></span></div>
+      <div class="row"><span class="dot"></span><span class="v-e">花费<b>¥2.46</b></span></div>
+      <span class="model">deepseek-flash</span>
+    </div>
+  </div>
+</div>
+
+<table>
+  <tr><th>选项</th><th>做法</th><th>代价</th></tr>
+  <tr><td><b>A</b></td><td>现状：12px 裸文字，三级文字色</td><td>无</td></tr>
+  <tr><td><b>B</b></td><td>轻底色胶囊，6px 圆角，20px 高</td><td>无</td></tr>
+  <tr><td><b>C</b></td><td>1px 描边胶囊，999px 全圆角</td><td>无</td></tr>
+  <tr><td><b>D</b></td><td>「本聊天」标签 + 加粗金额，无底色</td><td>占宽约 26px</td></tr>
+  <tr><td><b>E</b></td><td>胶囊 +「花费」标签 + 加粗金额</td><td>占宽最多</td></tr>
+</table>
+
+<p class="lead" style="margin-top:20px">另外两件事可以顺手改：<code>鼠标悬停显示原生 tooltip</code> 换成点击弹出明细面板；以及统一强制两位小数（避免位数变化导致宽度跳动）。要哪个一并说。</p>
+</body>
+</html>
